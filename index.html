@@ -11,40 +11,51 @@
 <body>
 
     <section>
-        <div>
+        <div class="navbar">
             <img src="./assets/images/Logo.png" alt="DineEase">
-            <div>
-                <a href="">Home</a>
-                <a href="">About Us</a>
-                <a href="">Contact</a>
+            <div class="navbar-linkek">
+                <div><a href="">Home</a></div>
+                <div><a href="">About Us</a></div>
+                <div><a href="">Contact</a></div>
             </div>
         </div>
 
-        <div>
-            <div>
-                <h1>DineEase: Exceptional Dining Awaits.</h1>
-                <p>Dive into culinary wonders with DineEase. We curate top-rated restaurants, each with distinct flavors and ambiance. From international dishes to traditional delights and gastronomic adventures, find your perfect spot with DineEase.</p>
-                <button>
-                    <img src="./assets/images/Search Icon.png" alt="Search Icon">
-                    <span>Explore restaurants</span>
-                </button>
-            </div>
-            <div>
-                <img src="./assets/images/Hero Illustration.png" alt="">
+        
+    <div class="asd">
+        <div class="content">
+            <div class="DineEase-landsection">
+                <div class="landtext">
+                    <h1>DineEase: Exceptional Dining Awaits.</h1>
+                    <p>Dive into culinary wonders with DineEase. We curate top-rated restaurants, each with distinct flavors and ambiance. From international dishes to traditional delights and gastronomic adventures, find your perfect spot with DineEase.</p>
+                    <button class="explorerestaurant-btn">
+                        <img src="./assets/images/Search Icon.png" alt="Search Icon">
+                        <span>Explore restaurants</span>
+                    </button>
+                </div>
+                <div class="landimg">
+                    <img src="./assets/images/Hero Illustration.png" alt="">
+                </div>
             </div>
         </div>
+        <div class="costumeshape">
+            <div class="side-rectangle left"></div>
+            <div class="side-rectangle right"></div>
+        </div>
+    </div>
+
+
     </section>
 
     <section>
         <h1>Featured Restaurants</h1>
         <p>Discover Unforgettable Dining Destinations</p>
         
-        <div>
-            <div>
-                <div>
+        <div class="cardholder">
+            <div class="card">
+                <div class="card-img">
                     <img src="./assets/images/Restaurant1.png" alt="">
                 </div>
-                <div>
+                <div class="card-nameandrate">
                     <h2>Sarmale Bistro</h2>
                     <div>
                         <img src="./assets/images/star.png" alt="Star">
@@ -54,21 +65,19 @@
                         <img src="./assets/images/star.png" alt="Star">
                     </div>
                 </div>
-                <div>
+                <div class="card-description">
                     <p>
                         Experience Romania's culinary heart at Sarmale Bistro. Savor classics with a modern touch in our intimate, authentic ambiance. Celebrate timeless tradition.
                     </p>
                 </div>
-                <a href="#">View restaurant »</a>
+                <a class="card-viewrestaurant" href="#">View restaurant »</a>
             </div>
-        </div>
 
-        <div>
-            <div>
-                <div>
+            <div class="card">
+                <div class="card-img">
                     <img src="./assets/images/Restaurant2.png" alt="">
                 </div>
-                <div>
+                <div class="card-nameandrate">
                     <h2>La Piața</h2>
                     <div>
                         <img src="./assets/images/star.png" alt="Star">
@@ -78,21 +87,20 @@
                         <img src="./assets/images/star.png" alt="Star">
                     </div>
                 </div>
-                <div>
+                <div class="card-description">
                     <p>
                         Discover a fusion of Europe's flavors at La Piața, set in the heart of the city. Savor dishes from locally-sourced ingredients in our cozy bistro ambiance.
                     </p>
                 </div>
-                <a href="#">View restaurant »</a>
+                <a class="card-viewrestaurant" href="#">View restaurant »</a>
             </div>
-        </div>
 
-        <div>
-            <div>
-                <div>
+
+            <div class="card">
+                <div class="card-img">
                     <img src="./assets/images/Restaurant3.png" alt="">
                 </div>
-                <div>
+                <div class="card-nameandrate">
                     <h2>Halász Fogadó</h2>
                     <div>
                         <img src="./assets/images/star.png" alt="Star">
@@ -102,15 +110,60 @@
                         <img src="./assets/images/star.png" alt="Star">
                     </div>
                 </div>
-                <div>
+                <div class="card-description">
                     <p>
                         Immerse in Eastern European authenticity at Halász Fogadó. Relish traditional dishes amid an atmosphere rich in charm and history. Join us for a timeless culinary experience.
                     </p>
                 </div>
-                <a href="#">View restaurant »</a>
+                <a class="card-viewrestaurant" href="#">View restaurant »</a>
             </div>
         </div>
 
+
+    </section>
+
+    <section>
+        <h1>Delightful Experiences Shared by Our Guests</h1>
+        <div>
+            <p>Exquisite flavors, impeccable service, and a memorable ambiance – DineEase made our celebration truly special!</p>
+            <h2>Robert & Emily</h2>
+        </div>
+        <div>
+            <p>DineEase guided us to hidden gems we never knew existed! We've become food adventurers, thanks to this platform.</p>
+            <h2>Lisa & Mark</h2>
+        </div>
+        <div>
+            <p>With DineEase, we've uncovered culinary treasures right in our city. Every dining recommendation feels like an exclusive invitation to a world of flavors. We thought we knew our local dining scene, but DineEase introduced us to so much more.</p>
+            <h2>Emma & Jacob</h2>
+        </div>
+    </section>
+    <section>
+        <h1>Find Your Perfect Dining Spot</h1>
+        <p>Search by Cuisine, Location, or Name</p>
+        <div>
+            <input type="checkbox" id="advancedCheckbox">
+            <div class="search-container">
+                <input type="text" id="simpleSearch" placeholder="Keresés...">
+                <label for="advancedCheckbox">
+                    <img src="./assets/images/Search Icon.png" alt="" style="background-color: #212121;">
+                </label>
+            </div>
+        
+            <div class="advanced-search-container" id="advancedSearchContainer">
+                <h2>Részletes Keresés</h2>
+                    <select id="category" name="category">
+                        <option value="option1">Opció 1</option>
+                        <option value="option2">Opció 2</option>
+                        <option value="option3">Opció 3</option>
+                    </select>
+                    <input type="text">
+                    <input type="text">
+        
+                    <label for="advancedCheckbox">
+                        <img src="./assets/images/Search Icon.png" alt="" style="background-color: #212121;">
+                    </label>
+            </div>
+        </div>
     </section>
 </body>
 </html>

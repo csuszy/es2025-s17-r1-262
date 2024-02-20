@@ -1,0 +1,169 @@
+:root{
+    --lila: #7c3aed;
+    --feher: #f1f1f1;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 10px 0;
+}
+.navbar-linkek{
+    display: flex;
+    gap: 50px;
+}
+.navbar-linkek a {
+    text-decoration: none;
+    color: #121212;
+    font-weight: 550;
+}
+
+.explorerestaurant-btn{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    color: var(--feher);
+    font-weight: 500;
+    background-color: var(--lila);
+}
+
+.DineEase-landsection{
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 100%;
+    place-items: CENTER;
+}
+.landtext{}
+.landimg{}
+.landimg img{
+    width: 100%;
+}
+
+
+
+
+
+
+
+.asd {
+    position: relative;
+    overflow: hidden;
+}
+
+.content {
+    min-height: 300px;
+    position: relative;
+    z-index: 1;
+}
+
+.costumeshape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+    z-index: 0;
+}
+
+.side-rectangle {
+    position: absolute;
+    bottom: 10px;
+    width: 30%;
+    height: 100%;
+    background-color: #19abff;
+    z-index: 0;
+}
+
+.left {
+    left: 0;
+    bottom: 0px;
+    height: 60px;
+    clip-path: polygon(0% 54%, 100% 0%, 100% 44%, 0% 100%);
+}
+
+.right {
+    bottom: 78px;
+    right: 0;
+    height: 60px;
+    clip-path: polygon(0% 54%, 100% 0%, 100% 44%, 0% 100%);
+}
+
+.cardholder {
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    border: 1px solid #121212;
+    margin: 5px;
+}
+.card-img{
+
+}
+.card-img img{
+    width: 100%;
+}
+.card-nameandrate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-description{}
+.card-viewrestaurant{}
+
+
+
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#advancedSearchContainer {
+    display: none; /* Kezdetben rejtett */
+}
+
+input[type="checkbox"] {
+    display: none; /* Elrejtjük az alap checkboxot */
+}
+
+/* Amikor a checkbox be van jelölve, megjelenítjük a részletes keresést */
+input[type="checkbox"]:checked ~ #advancedSearchContainer {
+    display: block;
+}
+
+.advanced-search-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 30% 30% 30% 10%;
+    grid-gap: 10px;
+}
