@@ -4,7 +4,8 @@
     --vilagoslila: #ede9fe;
     --sotetebblila: #cbb5f9;
     --footerdark: #000000;
-    --textszurke: #4a5362
+    --textszurke: #4a5362;
+    --description: #686868;
 }
 
 *{
@@ -17,6 +18,7 @@ body {
 section{
     min-height: 500px;
 }
+
 
 
 .navbar{
@@ -193,17 +195,38 @@ section{
     align-items: center;
 }
 
+.FeaturedRestaurants-title{
+    font-size: 4rem;
+    letter-spacing: -1px;
+    font-weight:bolder;
+    margin-bottom: 0;
+    margin-left: 80px;
+    align-self: self-start;
+}
+.FeaturedRestaurants-alttitle{
+    font-size: 1.1rem;
+    color: var(--textszurke);
+    font-weight: 500;
+    margin-top: 10px;
+    margin-left: 80px;
+    align-self: self-start;
+}
+
+
 .cardholder {
     display: flex;
     flex-direction: row;
+    gap: 25px;
 }
 
 .card{
     display: flex;
-    max-width: 400px;
+    max-width: 360px;
     flex-direction: column;
-    border: 1px solid #121212;
     margin: 5px;
+    box-shadow: 1px 1px 5px #d4d4d4;
+    border-radius: 6px;
+    padding: 16px;
 }
 @media only screen and (max-width: 1100px){
     .cardholder{
@@ -228,9 +251,11 @@ section{
     }
 }
 
-
 .card-img{
-
+}
+.card-img > img{
+    max-height: 200px;
+    border-radius: 10px;
 }
 .card-img img{
     width: 100%;
@@ -239,26 +264,120 @@ section{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-content: end;
+    margin-bottom: 0;
+    height: 50px;
 }
-.card-description{}
-.card-viewrestaurant{}
+.ratestars{
+    align-self: end;
+}
+.gray{
+    filter: grayscale(100%);
+}
+
+.card-nameandrate > h2{
+    font-size: 1.6rem;
+    font-weight: 700;
+    align-items: end;
+}
+
+.card-description > p{
+    font-size: 1.1rem;
+    color: var(--description);
+    font-weight: 500;
+}
+.card-viewrestaurant{
+    color: var(--lila);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: right;
+}
 
 
 .testimonials{
-    background-color: var(--vilagoslila);;
+    background-color: var(--vilagoslila);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 640px;
+    height: max-content;
+    justify-content: center;
+    gap: 40px;
+}
+
+.testimonials > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.testimonials > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 40px;
+}
+
+.testimonials h1{
+    font-size: 42px;
+    letter-spacing: -1px;
+    font-weight:bolder;
+    margin-bottom: 0;
+    margin-left: 80px;
+    max-width: 420px;
+    align-self: flex-end;
+}
+svg{
+    width: 16px;
+    height: 16px;
+    margin-top: 10px;
+}
+.quoteincarda{
+
+}
+
+.experiencecard{
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    align-self: flex-end;
+}
+.experiencecard2{
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.experiencecard3{
+    max-width: 310px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+
+.experiencecardbody{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 14px 16px;
+}
+.experienceCardText > h4{
+    margin: 12px 0;
 }
 
 
 
+.restaurant_search input{
+    padding: 0;
+}
 .search-container {
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 320px 30px;
+}
+.search-container img {
+    height: 100%;
+    width: auto;
 }
 
-button {
-    padding: 8px;
-    cursor: pointer;
-}
 
 #advancedSearchContainer {
     display: none;
