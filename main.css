@@ -14,6 +14,7 @@
 body {
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 section{
     min-height: 500px;
@@ -298,7 +299,7 @@ section{
 .testimonials{
     background-color: var(--vilagoslila);
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 50% 45%;
     min-height: 640px;
     height: max-content;
     justify-content: center;
@@ -334,7 +335,6 @@ svg{
     margin-top: 10px;
 }
 .quoteincarda{
-
 }
 
 .experiencecard{
@@ -371,24 +371,109 @@ svg{
 }
 .search-container {
     display: grid;
-    grid-template-columns: 320px 30px;
+    grid-template-columns: 300px 36px 46px;
+    justify-content: center;
+}
+.search-container button{
+    height: 100%;
+    width: 46px;
+    background-color: var(--vilagoslila);
+    margin-left: 16px;
+    border-radius: 8px;
+    max-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.search-container button > *{
+    fill: #000000 !important;
 }
 .search-container img {
-    height: 100%;
-    width: auto;
+    width: 34px;
+}
+.restaurant_search > h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.restaurant_search > p{
+    text-align: center;
+    margin: 5px 0 20px 0;
+    font-weight: 500;
+}
+
+
+
+#simpleSearch{
+    padding-left: 38px;
+    background: url("./assets/images/Search\ Iconvector.svg") no-repeat left;
+    background-size: 36px;
+    background-color: var(--vilagoslila);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    height: 46px;
+}
+.filter{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 36px;
+    background-color: var(--vilagoslila);
+    border-radius: 0 8px 8px 0;
+}
+.filter > img{
+    width: 100%;
+    max-width: 22px;
 }
 
 
 #advancedSearchContainer {
     display: none;
 }
+#advancedSearchContainer{
+    grid-template-columns: 200px 200px 200px 46px;
+    gap: 10px;
+    justify-content: center;
+}
+#advancedSearchContainer input, #advancedSearchContainer select{
+    padding-left: 8px;
+    background-size: 36px;
+    background-color: var(--vilagoslila);
+    border: none;
+    border-radius: 8px;
+    height: 46px;
+}
+#advancedSearchContainer button{
+    height: 100%;
+    width: 46px;
+    background-color: var(--vilagoslila);
+    border-radius: 8px;
+    max-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+#advancedSearchContainer img{
+    height: 100%;
+    width: auto;
+}
+#advancedSearchContainer label{
+    grid-column: 1/5;
+    text-align: center;
+    color: var(--lila);
+    font-weight: 700;
+}
+
+
 
 input[type="checkbox"] {
     display: none;
 }
 
 input[type="checkbox"]:checked ~ #advancedSearchContainer {
-    display: block;
+    display: grid;
 }
 input[type="checkbox"]:checked ~ .search-container {
     display: none;
@@ -400,4 +485,33 @@ form {
     display: grid;
     grid-template-columns: 30% 30% 30% 10%;
     grid-gap: 10px;
+}
+
+.AllrestaurantSearch{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+footer{
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: var(--description);
+}
+footer a{
+    color: var(--description);
+    text-decoration: none;
+}
+.footerCol1{
+    display: flex;
+    flex-direction: column;
+}
+.footerCol1 img{
+    max-width: 30px;
+}
+.footerCol2 img{
+    max-width: 30px;
 }
