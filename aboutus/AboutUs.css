@@ -1,0 +1,333 @@
+html {
+    min-height: 100dvh;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    max-width: 100%;
+    max-height: auto;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    min-height: 60px;
+    font-size: 16px;
+}
+
+.navbarlinks {
+    display: flex;
+    gap: 50px;
+}
+
+.navbarlinks a {
+    text-decoration: none;
+    color: #121212;
+    font-weight: 550;
+}
+
+#homeHyper {
+    margin-left: 30px;
+}
+
+section {
+    border: none;
+}
+
+#AboutUsTimeLineHeader,
+#AboutUsTeamHeader {
+    justify-content: center;
+    text-align: center;
+}
+
+#AboutUsTimeLineH1H2 h1 {
+    font-size: 52px;
+    color: black;
+}
+
+#AboutUsTeamHeader h1 {
+    font-size: 52px;
+    color: black;
+}
+
+#AboutUsTimeLineH2 {
+    font-size: 18px;
+    color: #4d5765;
+    padding-bottom: 80px;
+    padding-top: 0px;
+}
+
+#AboutUsTeamHeader h2 {
+    font-size: 18px;
+    color: #4d5765;
+    padding-bottom: 80px;
+}
+.timelineFrame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeline {
+    padding: 30px 80px;
+    width: max-content;
+
+}
+
+.timeline ul {
+    list-style-type: none;
+    border-top: 1px solid #7c3aed;
+    padding-top: 11px;
+    white-space: nowrap;
+    margin: 0;
+    width: auto;
+}
+
+.timeline ul li {
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.content {
+    align-items: center;
+    justify-content: center;
+    display: block;
+    text-align: center;
+}
+
+.timeline ul li .content h3 {
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+    text-wrap: wrap;
+    color: #7c3aed;
+    font-size: 22px;
+    width: 150px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.timeline ul li .content p {
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    width: 150px;
+    text-wrap: wrap;
+    text-align: center;
+    color: #4d5765;
+}
+
+.timeline ul li:before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #7c3aed;
+    border-radius: 50%;
+    top: -18px;
+    transition: .2s;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.timeline ul li:after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 4px solid #7c3aed;
+    border-radius: 50%;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .2s;
+}
+
+#firstTimelineLI {
+    top: -18px;
+}
+
+
+.timeline ul li:hover:before {
+    background-color: transparent;
+    box-shadow: 0px 0px 10px 2px white;
+}
+
+@media (max-width:300px) {
+    .timeline {
+        width: 100%;
+        padding: 30px 5px 30px 10px;
+    }
+
+    .timeline ul li .content h3 {
+        color: #7c3aed;
+        font-size: 15px;
+    }
+
+}
+
+#timelineHR {
+    border: none;
+    border-top: 3px solid #7c3aed;
+    width: 100%;
+    width: 700px;
+    margin: 0px 0px 0px -120px;
+}
+
+.AboutUsTimeLineMainDiv,
+.AboutUsTeamMainDiv {
+    padding: 80px 50px 50px 50px;
+    max-height: 1000px;
+    height: fit-content;
+    max-width: 100%;
+
+}
+
+#AboutUsTeamDiv h1 {
+    font-size: 16px;
+}
+
+#AboutUsTeamDiv h2 {
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.TeamLine{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+
+#ConnectDineEaseSection {
+    background-color: #7c3aed;
+    padding: 160px;
+    color: white;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#ConnectDineEaseH2 h2 {
+    padding-bottom: 0px;
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+}
+
+.ConnectDineEaseParagraph {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+#ConnectDineEaseP {
+    font-weight: normal;
+    justify-content: center;
+    width: 60%;
+    text-wrap: wrap;
+    padding-top: 50px;
+    font-size: 22px;
+    text-align: unset;
+}
+
+.ConnectDineEaseButtonDiv {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+#ConnectDineEaseButton {
+    color: #7c3aed;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 50px 10px 50px 100px;
+    text-align: left;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer > .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#footerleftdiv,
+#footerrightdiv {
+    position: relative;
+    flex: 1;
+}
+
+#footerrightdiv {
+    padding-right: 150px;
+}
+
+#footerrightdiv img {
+    float: right;
+    padding: 5px;
+}
+
+#footerrightdiv p {
+    width: 120px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#privacyGO {
+    text-decoration: none;
+    color: white;
+}
+
+#copyrightSmall {
+    color: lightgray;
+    font-size: small;
+    padding-top: 20px;
+}
+
+.shapeCircle {
+    height: 50px;
+    width: 50px;
+    background-color: #555;
+    border-radius: 50%;
+}
