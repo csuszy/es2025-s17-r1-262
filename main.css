@@ -29,9 +29,7 @@ section{
     z-index: 5;
     background-color: white;
     padding-left: 100px;
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
+    width: 100dvh;
     min-height: 60px;
     font-size: 16px;
 }
@@ -72,7 +70,8 @@ section{
     max-width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:flex-start;
+    height: fit-content;
 }
 .DineEase-landsection{
     max-width: 1300px;
@@ -93,7 +92,11 @@ section{
     line-height: 1.8rem;
     font-weight: 500;
 }
-.landimg{}
+.landimg{
+    max-width: 500px;
+    position: relative;
+    bottom: -100px;
+}
 .landimg img{
     width: 100%;
 }
@@ -104,13 +107,13 @@ section{
 
 
 
-.asd {
+.HeroSectionFrame {
     position: relative;
     z-index: 100;
 }
 
 .content {
-    min-height: 300px;
+    min-height: 600px;
     position: relative;
     z-index: 1;
 }
@@ -122,7 +125,7 @@ section{
     width: 100%;
     height: 100%;
     background-color: #f6f9ff;
-    clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     z-index: 0;
 }
 
@@ -139,16 +142,16 @@ section{
     bottom: 0px;
     height: 80px;
     width: 30%;
-    clip-path: polygon(0% 33px, 100% 5px, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 33px, 100% 1px, 100% 100%, 0% 100%);
     background-color: var(--lila);
 }
 
 .right {
-    bottom: 5%;
+    bottom: 60px;
     right: 0;
     height: 110px;
     width: 40%;
-    clip-path: polygon(0% 40px, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 54px, 100% 0%, 100% 100%, 0% 100%);
     background-color: var(--sotetebblila);
 }
 .right-bottom{
@@ -179,11 +182,11 @@ section{
 }
 
 .costumeshape-down > .right {
-    bottom: 5%;
+    bottom: 30px;
     right: 0;
     height: 110px;
     width: 16%;
-    clip-path: polygon(0% 0%, 100% 0, 100% 55%, 0% 70%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 50%, 0% 73px);
     background-color: var(--lila);
 }
 .costumeshape-down > .right-bottom{
@@ -232,12 +235,12 @@ section{
 .cardholder {
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 18px;
 }
 
 .card{
     display: flex;
-    max-width: 360px;
+    max-width: 340px;
     flex-direction: column;
     margin: 5px;
     box-shadow: 1px 1px 5px #d4d4d4;
@@ -292,13 +295,13 @@ section{
 }
 
 .card-nameandrate > h2{
-    font-size: 1.6rem;
+    font-size: 24px;
     font-weight: 700;
     align-items: end;
 }
 
 .card-description > p{
-    font-size: 1.1rem;
+    font-size: 16px;
     color: var(--description);
     font-weight: 500;
 }
@@ -505,28 +508,71 @@ form {
 .AllrestaurantSearch{
     margin-top: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.ShowMoreDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--lila);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 50px 0;
+
+}
+.ShowMoreDiv img{
+    max-height: 24px;
+    width: auto;
+    margin-left: 8px;
+}
 
 
-footer{
-    background-color: #000000;
+footer {
+    background-color: black;
+    color: white;
+    padding: 50px 10px 50px 100px;
+    text-align: left;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer > .container {
     display: grid;
     grid-template-columns: 50% 50%;
-    color: var(--description);
 }
-footer a{
-    color: var(--description);
+
+#footerleftdiv,
+#footerrightdiv {
+    position: relative;
+    flex: 1;
+}
+
+#footerrightdiv {
+    padding-right: 150px;
+}
+
+#footerrightdiv img {
+    float: right;
+    padding: 5px;
+}
+
+#footerrightdiv p {
+    width: 120px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#privacyGO {
     text-decoration: none;
+    color: white;
 }
-.footerCol1{
-    display: flex;
-    flex-direction: column;
-}
-.footerCol1 img{
-    max-width: 30px;
-}
-.footerCol2 img{
-    max-width: 30px;
+
+#copyrightSmall {
+    color: lightgray;
+    font-size: small;
+    padding-top: 20px;
 }
