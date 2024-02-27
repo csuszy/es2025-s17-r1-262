@@ -129,6 +129,9 @@ footer > .container {
     padding-top: 20px;
 }
 
+
+
+/* here is the media roule for the mobile views */
 @media only screen and (max-width:800px) {
     .navbar{
         padding-left: 20px;

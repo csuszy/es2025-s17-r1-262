@@ -1,3 +1,4 @@
+/* set the default color varible */
 :root{
     --lila: #7c3aed;
     --feher: #ffffff;
@@ -8,6 +9,8 @@
     --description: #686868;
 }
 
+
+/* the default font family and margin in the body */
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -16,12 +19,13 @@ body {
     padding: 0;
     max-width: 100%;
 }
+
 section{
     min-height: 500px;
 }
 
 
-
+/* Vavigation bar style */
 .navbar {
     display: flex;
     justify-content: left;
@@ -118,6 +122,8 @@ section{
     z-index: 1;
 }
 
+
+/* the heron section in the home page cotume shape style and position */
 .costumeshape {
     position: absolute;
     bottom: 0;
@@ -241,6 +247,7 @@ hr{
 }
 
 
+/* the card and the card holder main and flexible style */
 .cardholder {
     display: flex;
     flex-direction: row;
@@ -561,6 +568,8 @@ form {
     transform: rotateX(180deg);
 }
 
+
+/* footer */
 footer {
     background-color: black;
     color: white;
@@ -611,8 +620,7 @@ footer > .container {
 
 
 
-
-
+/* here is the media roule for the mobile views */
 @media only screen and (max-width:800px) {
     .navbar{
         padding-left: 20px;

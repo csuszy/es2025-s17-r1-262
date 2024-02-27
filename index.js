@@ -1,4 +1,6 @@
+//The first thing we need to do is to import the fetch function from the API.
 async function getFeaturedRestaurant() {
+    //fetch the data from the URL
     const response = await fetch('https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants/top-rated');
     const restaurants = await response.json();
     let toHTML = "";
@@ -7,6 +9,7 @@ async function getFeaturedRestaurant() {
         for (let resInfo of restaurants) {
             let ertekelesHTML = "";
 
+            //After we fetch the data and store it, after we check the rating,and we add the stars to the card.
             for (let i = 1; i <= 5; i++) {
                 let csillag = document.createElement('img');
                 csillag.src = i <= resInfo.rating ? './assets/images/star.png' : './assets/images/star.png';
@@ -17,6 +20,7 @@ async function getFeaturedRestaurant() {
                 ertekelesHTML += csillag.outerHTML;
             }
 
+            //After we add the stars to the card, add the next data to the card and add the next card to the card holder.
             toHTML += `
                 <div class="card">
                     <div class="card-img">
@@ -42,15 +46,18 @@ async function getFeaturedRestaurant() {
 
     document.getElementById('cardholder').innerHTML += toHTML;
 }
-
+//Call the function to get the featured restaurant.
 getFeaturedRestaurant();
 
 
 
-
+// this variable contains the first 3 card, and the second variable contains the another cards.
 let toHTMLlater = "";
 let toHTML = "";
+//The second function is used to get the ALL restaurants from the API.
 async function getAllRestaurant() {
+
+    //fetch the data from the URL
     const response = await fetch('https://es2025-s17-hu-r1-backend.onrender.com/api/v1/restaurants');
     const restaurants = await response.json();
     let curCard = 0;
@@ -60,6 +67,7 @@ async function getAllRestaurant() {
             curCard += 1;
             let ertekelesHTML = "";
 
+            //add the stars to the card.
             for (let i = 1; i <= 5; i++) {
                 let csillag = document.createElement('img');
                 csillag.src = i <= resInfo.rating ? './assets/images/star.png' : './assets/images/star.png';
@@ -69,7 +77,10 @@ async function getAllRestaurant() {
                 }
                 ertekelesHTML += csillag.outerHTML;
             }
+            // This IF checks the stored card. If we stored the first 3 cards after the else sectionn add the another acard to the toHTMLLater varible.
             if (curCard >= 4) {
+
+                //after everything is ok we add the card to the card holder.
                 toHTMLlater += `
                     <div class="card">
                         <div class="card-img">
@@ -89,6 +100,7 @@ async function getAllRestaurant() {
                 `;
             }
             else{
+                //after everything is ok we add the card to the card holder.
                 toHTML += `
                     <div class="card">
                         <div class="card-img">
@@ -119,6 +131,8 @@ async function getAllRestaurant() {
 getAllRestaurant();
 
 
+
+// this 2 function checks the button state. If the button is the Show more button, we add the cards from the toHTMLLater variable, set the button state none and enable the show less button and vice versa
 function loadAllRes() {
     var btn = document.getElementById('showMoreBtn');
     var lessbtn = document.getElementById('showLessBtn');
@@ -142,5 +156,3 @@ function ShoLessRes() {
     btn.style.display = 'none';
     morebtn.style.display = 'flex';
 }
-
-

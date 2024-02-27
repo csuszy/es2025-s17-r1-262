@@ -229,6 +229,7 @@ footer > .container {
 }
 
 
+/* here is the media roule for the mobile views */
 
 @media only screen and (max-width:800px) {
     .navbar{

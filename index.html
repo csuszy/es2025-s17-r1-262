@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>DineEase Showcase Website - Home Page</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-</head>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>DineEase Showcase Website - Home Page</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name='description' content='Welcome to DineEase Showcase - Your go-to platform for delightful dining experiences'>
+        <meta name='keywords' content='DineEase, showcase, dining, restaurant, menu'>
+        <meta name='author' content='Bence Csaszi'>
+
+        <meta property='og:title' content='DineEase Showcase Website - Home Page'>
+        <meta property='og:description' content='Welcome to DineEase Showcase - Your go-to platform for delightful dining experiences'>
+        <meta property='og:image' content='./assets/images/Logo@2x.png'>
+        <meta property='og:url' content='https://www.dineease.com'>
+        <meta property='og:type' content='website'>
+        <link rel='icon' href='./assets/images/Logomark.png' type='image/x-icon'>
+    
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+    </head>
+    
 <body>
 
-        <div class="navbar">
-            <img src="./assets/images/Logo.png" alt="DineEase">
-            <div class="navbarlinks">
-                <div><a id="homeHyper" href="">Home</a></div>
-                <div><a href="./aboutus/AboutUs.html">About Us</a></div>
-                <div><a href="./contact/contact.html">Contact</a></div>
-            </div>
+    <!-- Navigaton bar -->
+    <div class="navbar">
+        <img src="./assets/images/Logo.png" alt="DineEase">
+        <div class="navbarlinks">
+            <div><a id="homeHyper" href="">Home</a></div>
+            <div><a href="./aboutus/AboutUs.html">About Us</a></div>
+            <div><a href="./contact/contact.html">Contact</a></div>
         </div>
-    <section class="HeroSection">
+    </div>
 
-        
+    <!-- Landing page first section. Here the hero title and the hero ilustrasion -->
+    <section class="HeroSection">
         <div class="HeroSectionFrame">
             <div class="content">
                 <div class="DineEase-landsection">
@@ -36,6 +50,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- The costume shapes -->
             <div class="costumeshape">
                 <div class="side-rectangle left"></div>
                 <div class="side-rectangle right"></div>
@@ -43,7 +59,10 @@
         </div>
     </section>
 
+    <!-- Fearured Restaurant section -->
     <section class="FeaturedRestaurants">
+
+        <!-- costume shape  -->
         <div class="costumeshape-down">
             <div class="side-rectangle left"></div>
             <div class="side-rectangle right"></div>
@@ -54,12 +73,14 @@
             <h1 class="FeaturedRestaurants-title">Featured Restaurants</h1>
             <p class="FeaturedRestaurants-alttitle">Discover Unforgettable Dining Destinations</p>
             
+            <!-- The 3 featured Restaurants -->
             <div class="cardholder" id="cardholder">
             </div>
 
         </div>
     </section>
 
+    <!-- Testimonials. This section contain the pepole feedback and expreiences -->
     <section class="testimonials">
         <div>
             <h1 class="experienceMainTitle">Delightful Experiences Shared by Our Guests</h1>
@@ -98,17 +119,19 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </section>
 
 
+    <!-- The all restaurants section with a search bar -->
     <section class="restaurant_search">
         <h1>Find Your Perfect Dining Spot</h1>
         <p>Search by Cuisine, Location, or Name</p>
+
         <div>
             <input type="checkbox" id="advancedCheckbox">
+            
+            <!-- The simple search bar -->
             <div class="search-container">
                 <input type="text" id="simpleSearch" placeholder="Search for restaurants">
                 <label for="advancedCheckbox" class="filter">
@@ -117,6 +140,7 @@
                 <button><img src="./assets/images/Search Iconvector.svg" alt="search" style=""></button>
             </div>
         
+            <!-- The advance search bar -->
             <div class="advanced-search-container" id="advancedSearchContainer">
                 <input type="text" placeholder="Cusine">
                 <input type="text" placeholder="Location">
@@ -128,10 +152,14 @@
                 </label>
             </div>
         </div>
+
+        <!-- This contgains the all cards of the restaurants -->
         <div class="AllrestaurantSearch">
             <div class="cardholder" id="AllRestaurantCard">
                 
             </div>
+
+            <!-- Show more button with the onlick event -->
             <div class="ShowMoreDiv">
                 <button onclick="loadAllRes()" id="showMoreBtn">
                     Show more
@@ -144,6 +172,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Fotther section where have the privacy policy and the contacts information -->
     <footer>
         <div class="container">
             <div id="footerleftdiv">
