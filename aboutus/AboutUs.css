@@ -339,3 +339,20 @@ footer > .container {
     background-color: #555;
     border-radius: 50%;
 }
+
+
+
+@media only screen and (max-width:800px) {
+    .navbar{
+        padding-left: 20px;
+        width: fit-content;
+    }
+    .timeline ul li{
+        padding: 0;
+        margin: 0 -10px;
+    }
+    .TeamLine{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}

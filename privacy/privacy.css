@@ -1,0 +1,137 @@
+:root{
+    --lila: #7c3aed;
+    --feher: #ffffff;
+    --vilagoslila: #ede9fe;
+    --sotetebblila: #cbb5f9;
+    --footerdark: #000000;
+    --textszurke: #4a5362;
+    --description: #686868;
+}
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+section{
+    min-height: 500px;
+    padding: 22px;
+}
+ul{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+li h4{
+    margin-bottom: 0;
+    margin-top: 25px;
+}
+li p{
+    margin-top: 5px;
+}
+p{
+    max-width: 1000px;
+    font-size: 16px;
+}
+h1{
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.brand{
+    margin-top: 6px;
+    color: var(--description);
+    font-weight: 500;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    z-index: 5;
+    background-color: white;
+    padding-left: 100px;
+    width: max-content;
+    min-height: 60px;
+    font-size: 16px;
+}
+
+.navbarlinks {
+    display: flex;
+    gap: 50px;
+}
+
+.navbarlinks a {
+    text-decoration: none;
+    color: #121212;
+    font-weight: 550;
+}
+
+#homeHyper {
+    margin-left: 30px;
+}
+
+
+
+
+
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 50px 10px 50px 100px;
+    text-align: left;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+footer > .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#footerleftdiv,
+#footerrightdiv {
+    position: relative;
+    flex: 1;
+}
+
+#footerrightdiv {
+    padding-right: 150px;
+}
+
+#footerrightdiv img {
+    float: right;
+    padding: 5px;
+}
+
+#footerrightdiv p {
+    width: 120px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#privacyGO {
+    text-decoration: none;
+    color: white;
+}
+
+#copyrightSmall {
+    color: lightgray;
+    font-size: small;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width:800px) {
+    .navbar{
+        padding-left: 20px;
+        width: fit-content;
+    }
+}

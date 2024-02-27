@@ -199,8 +199,6 @@ section{
 }
 
 
-
-
 .FeaturedRestaurants{
     height: 700px;
     margin: 10px 0;
@@ -213,6 +211,17 @@ section{
     justify-content:end;
     align-items: center;
 }
+hr{
+    width: 60%;
+    text-align: center;
+    border: none;
+    background-color: var(--description);
+    height: 2px;
+    opacity: 50%;
+    border-radius: 20px;
+    display: none;
+}
+
 
 .FeaturedRestaurants-title{
     font-size: 4rem;
@@ -235,6 +244,8 @@ section{
 .cardholder {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 18px;
 }
 
@@ -316,6 +327,9 @@ section{
 
 .testimonials{
     background-color: var(--vilagoslila);
+    background-image: url('./assets/images/Quote\ mark.png');
+    background-repeat: no-repeat;
+    background-position: 50px 50px;
     display: grid;
     grid-template-columns: 50% 45%;
     min-height: 640px;
@@ -519,15 +533,33 @@ form {
     color: var(--lila);
     font-size: 18px;
     font-weight: 600;
+}
+.ShowMoreDiv button{
+    color: var(--lila);
+    font-size: 18px;
+    font-weight: 600;
     margin: 10px 0 50px 0;
-
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    transition: .2s all ease-in-out;
 }
 .ShowMoreDiv img{
     max-height: 24px;
     width: auto;
     margin-left: 8px;
 }
+#showLessBtn{
+    display: none;
+}
 
+#showLessBtn img{
+    transform: rotateX(180deg);
+}
 
 footer {
     background-color: black;
@@ -575,4 +607,72 @@ footer > .container {
     color: lightgray;
     font-size: small;
     padding-top: 20px;
+}
+
+
+
+
+
+@media only screen and (max-width:800px) {
+    .navbar{
+        padding-left: 20px;
+        width: fit-content;
+    }
+    .DineEase-landsection{
+        grid-template-columns: 100%;
+        grid-template-rows: max-content;
+        height: fit-content;
+        padding: 20px;
+    }
+    hr{
+        display: block;
+    }
+    .costumeshape{
+        display: none;
+    }
+    .costumeshape-down{
+        display: none;
+    }
+    .landimg{
+        position:unset;
+        height: min-content;
+    }
+
+    .cardholder{
+        justify-items: center;
+        padding-bottom: 60px;
+    }
+    .card{
+        max-width: 80%;
+        width: 100%;
+    }
+    .card-img img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+    .testimonials{
+        padding-top: 36px;
+        grid-template-columns: 100%;
+        padding-bottom: 60px;
+        gap: 20px;
+        background-position: 30px 40px;
+    }
+    .testimonials h1{
+        max-width: 100%;
+        max-width: 90%;
+        align-self: center;
+        margin-left: 0;
+    }
+    .testimonials > div:nth-child(2){
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .experiencecard,
+    .experiencecard2,
+    .experiencecard3{
+        max-width: 90%;
+        align-self: center;
+    }
 }

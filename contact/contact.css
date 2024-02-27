@@ -227,3 +227,18 @@ footer > .container {
     background-color: #555;
     border-radius: 50%;
 }
+
+
+
+@media only screen and (max-width:800px) {
+    .navbar{
+        padding-left: 20px;
+        width: fit-content;
+    }
+    .MainContainer{
+        grid-template-columns: 100%;
+    }
+    .ContactForm{
+        padding: 0;
+    }
+}
